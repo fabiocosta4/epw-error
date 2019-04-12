@@ -1,0 +1,75 @@
+--
+&inputepw
+  prefix      = '$PREFIX'
+  amass(1)    = 6.5235
+  outdir      = './'
+
+  elph        = .true.
+  kmaps       = .false.
+  epbwrite    = .true.
+  epbread     = .false.
+
+  epwwrite    = .true.
+  epwread     = .false.
+
+  nbndsub     =  9
+  nbndskip    =  2
+
+  wannierize  = .true.
+  num_iter    = 300
+  nbndsub     = 6
+  nbndskip    = 0
+  dis_win_max = 10
+  dis_froz_max= 5
+  dis_win_min = -6
+  dis_froz_min= -3
+
+  wdata(1) = 'bands_plot = .true.'
+  wdata(2) = 'begin kpoint_path'
+  wdata(3) = 'G 0.00 0.00 0.00 H -0.5 0.50 0.50'
+  wdata(4) = 'H -0.5 0.50 0.50 N 0.00 0.50 0.00'
+  wdata(5) = 'N 0.00 0.50 0.00 G 0.00 0.00 0.00'
+  wdata(6) = 'G 0.00 0.00 0.00 P 0.25 0.25 0.25'
+  wdata(7) = 'P 0.25 0.25 0.25 H -0.5 0.50 0.50'
+  wdata(8) = 'end kpoint_path'
+  wdata(9) = 'bands_plot_format = gnuplot'
+
+  
+
+  proj(1)     = 'random'
+
+  iverbosity  = 0
+
+  elecselfen  = .true.
+  phonselfen  = .true.
+  a2f         = .true.
+
+  ephwrite    = .true.
+  eliashberg  = .true.
+  muc         = 0.21
+  
+  fsthick     = 6 ! eV
+  eptemp      = 300 ! K
+  degaussw    = 0.05  ! eV
+  degaussq    = 0.05 ! meV
+
+  dvscf_dir   = './save'
+  filukk      = './Li.ukk'
+
+  nkf1        = $nkf
+  nkf2        = $nkf
+  nkf3        = $nkf
+
+  nqf1        = $nqf
+  nqf2        = $nqf
+  nqf3        = $nqf
+
+  nk1         = $nk
+  nk2         = $nk
+  nk3         = $nk
+
+  nq1         = $nq
+  nq2         = $nq
+  nq3         = $nq
+ /
+$km
